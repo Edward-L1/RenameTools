@@ -1,22 +1,18 @@
-# Android 资源批量重命名工具  
-# Android Resource Batch Renaming Tool
+# Android - 资源批量重命名工具 & Batch Renaming Tool
 
-## 项目简介  
-## Project Overview
+## 项目简介 & Project Overview
 
 本项目旨在为 Android 项目提供一站式的资源批量重命名解决方案，适用于需要生成多渠道包（即同一套代码产出多个不同资源名的应用）的场景。通过本工具，可以极大提升资源重命名的效率，减少人工操作失误，助力快速产出多渠道的 Android 应用。
 
 This project aims to provide a one-stop batch renaming solution for Android project resources, suitable for scenarios where multiple channel packages (i.e., different resource names generated from the same codebase) need to be produced. With this tool, you can greatly improve the efficiency of resource renaming, reduce manual errors, and quickly generate multi-channel Android applications.
 
-## 诞生背景  
-## Background
+## 诞生背景 & Background
 
 在实际 Android 项目开发中，尤其是需要产出多个渠道包（如同一套代码生成不同品牌、渠道的应用）时，往往需要对资源文件（如 strings、drawable、layout 等）进行批量重命名，以避免包体间资源冲突或实现定制化。手动重命名不仅繁琐且易出错，因此开发了本工具，实现资源的自动化批量重命名和引用同步更新。
 
 In actual Android project development, especially when multiple channel packages (such as different brands or channels generated from the same codebase) need to be produced, it is often necessary to batch rename resource files (such as strings, drawable, layout, etc.) to avoid resource conflicts between packages or to achieve customization. Manual renaming is tedious and error-prone, so this tool was developed to automate batch renaming of resources and synchronize reference updates.
 
-## 功能特性  
-## Features
+## 功能特性 & Features
 
 - **可视化操作界面**：基于 Tkinter 实现，支持目录选择、包体多选、重命名模式切换等。
 - **多包体支持**：自动扫描项目根目录下所有含有 `AndroidManifest.xml` 的包体，支持多包体同时处理。
@@ -36,14 +32,11 @@ In actual Android project development, especially when multiple channel packages
 - **Log Output**: Real-time display of operation logs for easy tracking and troubleshooting.
 - **Multithreading**: Smooth operation without UI freezing.
 
-## 使用方法  
-## Usage
+## 使用方法 & Usage
 
-### 1. 直接运行源码  
-### 1. Run the Source Code Directly
+### 1. 直接运行源码 & Run the Source Code Directly
 
-#### 环境准备  
-#### Environment Preparation
+#### 环境准备 & Environment Preparation
 
 - Python 3.x
 - 依赖库：`tkinter`（标准库自带）、`xml`、`threading` 等
@@ -51,23 +44,20 @@ In actual Android project development, especially when multiple channel packages
 - Python 3.x
 - Dependencies: `tkinter` (comes with the standard library), `xml`, `threading`, etc.
 
-#### 启动方式  
-#### Startup
+#### 启动方式 & Startup
 
 ```bash
 cd source
 python rename_Tools_2.0.0.py
 ```
 
-### 2. 使用 PyInstaller 封装的 App  
-### 2. Use the PyInstaller Packaged App
+### 2. 使用 PyInstaller 封装的 App & Use the PyInstaller Packaged App
 
 本项目已通过 PyInstaller 封装为 Mac 应用（`rename_Tools.app`），可直接双击运行，无需 Python 环境。
 
 This project has been packaged as a Mac application (`rename_Tools.app`) via PyInstaller, which can be run directly without a Python environment.
 
-#### 打包命令参考  
-#### Packaging Command Reference
+#### 打包命令参考 & Packaging Command Reference
 
 如需自行打包，可参考如下命令：
 
@@ -85,8 +75,7 @@ pyinstaller --onefile --windowed -i popCorn.icns rename_Tools_2.0.0.py
 - `--windowed`: No command line window (suitable for GUI applications)
 - `-i`: Specify application icon
 
-### 3. 操作流程  
-### 3. Operation Process
+### 3. 操作流程 & Operation Process
 
 1. **选择项目根目录**：需包含各包体（如 app、gp、huawei 等）的 Android 项目根目录。
 2. **选择包体**：可多选，默认勾选 app 包体。
@@ -100,8 +89,7 @@ pyinstaller --onefile --windowed -i popCorn.icns rename_Tools_2.0.0.py
 4. **Click "Start Renaming"**: The tool will automatically complete resource renaming and reference updates.
 5. **View Log Output**: The operation process and results will be displayed in real time in the log area.
 
-## 注意事项  
-## Notes
+## 注意事项 & Notes
 
 - 建议在操作前备份项目，避免误操作导致资源丢失。
 - 仅支持标准 Android 项目结构（即 `src/main/res` 目录结构）。
@@ -111,8 +99,7 @@ pyinstaller --onefile --windowed -i popCorn.icns rename_Tools_2.0.0.py
 - Only standard Android project structures are supported (i.e., the `src/main/res` directory structure).
 - Supports common resource directories such as multi-language values directories and different resolution drawable directories.
 
-## 适用场景  
-## Applicable Scenarios
+## 适用场景 & Applicable Scenarios
 
 - 需要批量生成多渠道包的 Android 项目
 - 需要统一资源命名规范、避免资源冲突的多包体项目
@@ -122,9 +109,7 @@ pyinstaller --onefile --windowed -i popCorn.icns rename_Tools_2.0.0.py
 - Multi-package projects that need to standardize resource naming and avoid resource conflicts
 - Development teams that need to automate resource and reference synchronization
 
-## 联系与反馈  
-## Contact & Feedback
+## 联系与反馈 & Contact/Feedback
 
 如有问题或建议，欢迎通过 Issue 或邮件反馈。
-
 If you have any questions or suggestions, feel free to submit an issue or contact us by email.
